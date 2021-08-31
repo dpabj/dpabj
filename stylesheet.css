@@ -1,271 +1,515 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
-}
-
 a {
+  display: block;
+  width:330px;
+  padding: 10px 0;
+  margin-left:600px ;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    rgba(230, 213, 189, 0.816) 0%,
+    rgba(230, 213, 189, 0.816) 50%,
+    rgba(243, 232, 217, 0.768) 50%,
+    rgba(243, 232, 217, 0.768) 100%
+  );
+  
+  transition: background-position ease 0.4s;
+  text-align: center;
+  color: rgb(112, 112, 112);
   text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.container {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+a:hover {
+  background-position: 0 0;
 }
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+@keyframes click-wave {
+	0% {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		opacity: 0.35;
+	}
+	100% {
+		width: 100px;
+		height: 100px;
+		margin-top: -45px;
+		margin-left: -45px;
+		opacity: 0;
+	}
+}
+.md-radio {
+	position: relative;
+	position: relative;
+  top: 2.5px;
+	right: 0;
+	bottom: 0px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+  border-radius: 50%;
+	margin-right: 5px;
+	cursor: pointer;
+	transition: all 0.15s ease-out 0s;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	background: rgba(243, 232, 217, 0.768);
+	-webkit-appearance: none;
+	        appearance: none;
 }
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
+.md-radio:checked {
+	background: rgba(170, 143, 123, 0.7);
+}
+.md-radio:checked::before {
+	font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+
+	text-align: center;
+}
+.md-radio:checked::after {
+	position: relative;
+	display: block;
+  border-radius: 50%;
+	content: '';
+	-webkit-animation: click-wave 0.65s;
+	        animation: click-wave 0.65s;
+	background: rgba(170, 143, 123, 0.7);
 }
 
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
+.tgt{
+  width: 15px;
+	height: 15px;
+  
+	color: rgba(170, 143, 123, 0.7);
+  font-weight:bold;
 }
 
-.btn-wrapper {
-  text-align: center;
+
+/*------------------------------------------------------------------------------------------------------------*/
+@keyframes click-wave {
+	0% {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		opacity: 0.35;
+	}
+	100% {
+		width: 100px;
+		height: 100px;
+		margin-top: -45px;
+		margin-left: -45px;
+		opacity: 0;
+	}
+}
+.op-radio {
+	position: relative;
+	position: relative;
+  top: 5px;
+	right: 0;
+	bottom: 0px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+  border-radius: 50%;
+	margin-right: 5px;
+	cursor: pointer;
+	transition: all 0.15s ease-out 0s;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	background: rgba(243, 232, 217, 0.768);
+	-webkit-appearance: none;
+	        appearance: none;
 }
 
-.btn-wrapper p {
-  margin-bottom: 20px;
+.inf{
+  color:rgba(230, 213, 189, 0.816);
+  font-weight: bold;
+  height: 30px;
+  line-height:40px;
+  font-size: 20px;
+  }
+
+.op-radio:checked{
+	background: rgba(170, 143, 123, 0.7);
+}
+.op-radio:checked + .inf{
+	color:rgba(170, 143, 123, 0.7)
+
 }
 
-.signup {
-  background-color: #239b76;
+
+.op-radio:checked::before {
+	font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+
+	text-align: center;
+}
+.op-radio:checked::after {
+	position: relative;
+	display: block;
+  border-radius: 50%;
+	content: '';
+	-webkit-animation: click-wave 0.65s;
+	        animation: click-wave 0.65s;
+	background: rgba(170, 143, 123, 0.7);
 }
 
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
+.tgt{
+  width: 15px;
+	height: 15px;
+  
+	color: rgba(170, 143, 123, 0.7);
+  font-weight:bold;
 }
 
-.twitter {
-  background-color: #55acee;
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+.fukidashi1 {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 1100px;
+  padding: 16px;
+  border-radius: 5px;
+  background: rgb(231, 216, 195);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.fukidashi:after {
+  
 }
 
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
+.fukidashi2 {
+  display: none;
+  width: 300px;
+  position: absolute ;
+  top: 420px;
+  left: 200px;
+  padding: 16px;
+  border-radius: 5px;
+  background: rgb(231, 216, 195);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 10px;
 }
 
-.btn:hover {
-  opacity: 1;
+
+.fukidashi3 {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 460px;
+  left: 200px;
+  padding: 16px;
+  border-radius: 5px;
+  background: rgb(231, 216, 195);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-.fa {
+.fukidashi4 {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 500px;
+  left: 200px;
+  padding: 16px;
+  border-radius: 5px;
+  background: rgb(231, 216, 195);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+
+.fukidashi5 {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 530px;
+  left: 200px;
+  padding: 16px;
+  border-radius: 5px;
+  background: rgb(231, 216, 195);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.fukidashi6 {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 10;
+  left: 200px;
+  padding: 16px;
+  border-radius: 5px;
+  background: rgb(231, 216, 195);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+
+
+.hd:hover + .fukidashi1 {
+  display: block;
+  background-position: 0 0;
+}
+
+
+#trmh:hover + .fukidashi2 {
+  display: block;
+}
+#nzgh:hover + .fukidashi3 {
+  display: block;
+}
+#kshh:hover + .fukidashi4 {
+  display: block;
+}
+
+#kkzh:hover + .fukidashi5 {
+  display: block;
+}
+
+#kthh:hover + .fukidashi6 {
+  display: block;
+}
+
+
+
+.container-u{
+  display: flex;
+  
+  padding:  10px;            /* 余白指定 */
+  overflow:  hidden;   /* floatで高さがなくなる問題解消 */
+  
+  height: 280px;
+}
+
+
+.container-d{
+  display: flex;
+  background-color: #fff;    /* 背景色指定 */
+  padding:  10px;            /* 余白指定 */
+  overflow:  hidden;   /* floatで高さがなくなる問題解消 */
+  
+  height: 280px;
+}
+
+
+#kjk{
+  color: rgb(250, 214, 170);
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
+  margin-left: 130px;
+}
+
+
+
+#tk{
+  color: rgb(226, 225, 173);
+  font-weight:bold;
+  font-size: 15px;
   margin-right: 5px;
 }
 
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
+
+
+#kzk{
+  color: rgb(243, 193, 184);
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.logo {
-  width: 124px;
-  margin-top: 20px;
+#mzk{
+  color: rgb(231, 170, 218,0.55);
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.header-left {
-  float: left;
+
+#kzjk{
+  color: rgb(231, 170, 218);
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.header-right {
-  float: right;
-  margin-right: -25px;
+#tkk{
+  color: rgb(170, 231, 194);/*提出可能期間*/
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
+#tfk{
+  color: rgba(170, 231, 194,0.6);/*提出不能期間*/
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
+#tyk{
+  color: rgb(157, 218, 207); /*適用（可能）期間*/
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
+#tygk{
+  color: rgba(157, 218, 207,0.6); /*適用外期間*/
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
+#fm{
+  color: rgba(166, 148, 173, 0.535);/*不明*/
+  font-weight:bold;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
-.heading h2 {
-  font-weight: normal;
+
+.container5 {
+  
+  color:rgba(172, 167, 159, 0.816);
+  font-size:20px ;
+  height: 250px;
+  margin-left: 0px;
+  font-weight: bold;
+  
 }
 
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
-}
-
-.clear {
-  clear: left;
-}
-
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
+.infp{
+  color:rgba(209, 188, 157, 0.816);
+  font-weight: bold;
+  height: 30px;
+  line-height:40px;
+  font-size: 20px;
+  
   }
 
-  .lesson-wrapper {
-    height: 990px;
-  }
 
-  footer {
-    text-align: center;
-  }
-}
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
 
-  .heading h2 {
+  .ttk{
+    color:rgba(230, 213, 189, 0.816);
+    font-weight: bold;
+    height: 30px;
+    line-height:40px;
     font-size: 20px;
-  }
+    
+    }
+
+    .ttk:hover{
+      color:rgba(209, 188, 157, 0.816);
+      font-weight: bold;
+      height: 30px;
+      margin-bottom: 5px;
+      
+      }
+  
+      
+
+
+ 
+
+
+.ajh{
+  font-size: 12px;
+  
+
 }
 
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
 
-  .menu-icon {
-    display: block;
-  }
 
-  .top-wrapper .btn {
-    width: 100%;
-  }
+input {
+  border: 1px solid rgba(230, 213, 189, 0.816);
+  width: 120px;
+}
 
-  .twitter {
-    margin-top: 10px;
-  }
+select {
+  border: 1px solid rgba(230, 213, 189, 0.816);
+  width: 120px;
+  height: 25px;
+}
 
-  .top-wrapper {
-    text-align: left;
-  }
+input:focus {
+  border: 2px solid rgba(230, 213, 189, 0.816);
+  outline: 0;
+}
 
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
+select:focus {
+  border: 2px solid rgba(230, 213, 189, 0.816);
+  outline: 0;
+}
 
-  .top-wrapper p {
-    font-size: 14px;
-  }
 
-  .lesson {
-    width: 100%;
-  }
+#bht{
+  width: 100px;
+  height:30px;
+  margin-left:10px ;
+  margin-right:10px ;
+  
+  border: 2px solid; 
+  font-weight:bold;
+  appearance: none;
+  border-radius: 5px;
+  color: rgba(230, 213, 189, 0.816);
+  background: rgb(255, 255, 255);
+  font-size: 12px;
+  border-color: rgba(230, 213, 189, 0.816);
+}
 
-  .lesson-wrapper {
-    height: 1700px;
-  }
 
-  .message-wrapper .btn {
-    width: 100%;
-  }
+#bht:hover{
+  background:rgba(230, 213, 189, 0.816) ; 
+  color: #fff;
+}
+
+
+.ip1{
+  width: 120px;
+  height: 20px;
+  margin: 4px;
+}
+
+
+canvas {
+   
+  margin-left: 5px;
+  width: 1300px;
+  
 }
