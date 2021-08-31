@@ -43,17 +43,12 @@
       trmitfk = 1
     }
 
-    alert(trmitfk);
    
 
     let skkvdm = skkvd.getMonth()+1
     
-
-
-
     
     
-
     
     let  mn1d = new Date(csktvdp1y.setDate(csktvdp1y.getDate()-1))
    
