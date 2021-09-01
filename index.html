@@ -1,140 +1,175 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>消費税判定</title>
-  <link rel="stylesheet" href="stylesheet.css">
-
-  
-  
-  
-
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>企業・ビジネスサイト向け 無料ホームページテンプレート tp_biz52</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/openclose.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<style>
+.menu1 a {background-position: -10px -10px;}
+.menu2 a {background-position: -10px -130px;}
+.menu3 a {background-position: -10px -250px;}
+.menu4 a {background-position: -10px -370px;}
+.menu5 a {background-position: -10px -490px;}
+</style>
+<![endif]-->
+<!--[if lt IE 10]>
+<style>
+.slide0,.slide1,.slide2,.slide3 {background: url(images/1.jpg) no-repeat center center;}
+</style>
+<![endif]-->
 </head>
-<body>
-  
-   <a href="#" class="hd">Tool for Consumption Tax(α)</a>
-  
-  
-  <!-- <h6 class="fukidashi1">納税義務の判定と各種届出の期限を表示します。コロナ特例,その他宥恕規定は考慮されていません。</div></h6> -->
-
-  
-<button id ="bht">Result</button>
-<button id ="bht">How to use</button>
-
-
-    <input class="md-radio" id="3" type="radio" name="g2" checked>
-    <label for="3" class = "tgt" >存続(分割)事業者</label>
-  
-    <input class="md-radio" id="4" type="radio" name="g2">
-    <label for="4"class ="tgt">消滅(承継)事業者</label>
 
 
 
 
 
-  <main>
+
+<body class="home">
+	
+<div id="container">
+	<h1>Tool for Consumption Tax(α)</h1> 
+	
+	<canvas id="target"></canvas>
+	<button id ="bht">Result</button>
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
     
-   <div class="container-u">
-     <div class="container1">
-       <div>
-       <input class="op-radio" id="21" type="checkbox" name="op">
-       <label class = "inf" >一定の場合　<input type="date" id = "itt" >　に　<select name="" id="itj">
-       <option>事業開始(新設)</option>
-       <option>相続</option>
-       <option>吸収合併</option>
-       <option>新設合併</option>
-       <option>吸収分割</option>
-       <option>新設分割</option>
-       </select>
-      
-       <label class = "inf">　　　資本金　　　<input input type="number" min="0" id ="cap">  <label class = "inf">　　特定要件　　<select name="" id="tss">
-       <option>非該当</option>
-       <option>該当</option>
-       </select>
-       </div>
+	<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="SAMPLE SITE"></a></h1>
 
-       <div>
-        <input class="op-radio" id="21" type="checkbox" name="op" checked>
-       <label class = "infp" >当課税期間　<input type="date" id = "skt">　～　<input  type="date" id = "fkt">　　　 課税売上高　<input type="number"min="0" id ="kzut"></label>
-       </div>
-       <div>
-        <input class="op-radio" id="22" type="checkbox" name="op" checked>
-       <label class = "infp">基準期間　　<input type="date" id = "skk">　～　<input type="date" id = "fkk">　 　　課税売上高　<input type="number" min="0" id ="kzuk"></label>
-       </div>
-       <div>
-        <input class="op-radio" id="23" type="checkbox" name="op" checked>
-       <label  class  ="ttk"  >特定期間　　<input type="date" id = "stk">　～　<input type="date" id = "ftk">　　　 課税売上高　<input type="number" min="0" id ="kzuz">　　給与等支払額　<input type="number" id ="kyz" ></label>
-       </div>
-       <div>
-        <input class="op-radio" id="24" type="checkbox" name="op">
-       <label class = "inf">課税事業者選択・変更　<input type="date" id = "kjsh">　に提出</label>　　　<input class="op-radio" id="25" type="checkbox" name="op"><label class = "inf">簡易課税　<input type="date" id = "kkzt">　に提出</label>
-       </div>
-       <div>
-        <input class="op-radio" id="26" type="checkbox" name="op">
-       <label class = "inf">一括比例配分　<input type="date" id = "ihh">　に最後に選択</label>
-      </div>
-       <div>
-        <input class="op-radio" id="27" type="checkbox" name="op"> <label class = "inf"> 調整対象固定資産仕入　<input type="date" id = "ttk">  </label>　
-        <input class="op-radio" id="28" type="checkbox" name="op"><label class = "inf">高額特定資産仕入　<input type="date" id = "kts"></label>　
-        <input class="op-radio" id="29" type="checkbox" name="op"><label class = "inf">棚卸資産の調整　<input type="date" id = "tst"></label>
-       </div>
-       
-     </div>
-    
+	<!--PC用（801px以上端末）メニュー-->
+	<nav id="menubar">
+	<ul>
+	
+	<li class="menuimg menu1"><a><span>一定の場合　<input type="date" id = "itt" >　に　<select name="" id="itj">
+		<option>事業開始(新設)</option>
+		<option>相続</option>
+		<option>吸収合併</option>
+		<option>新設合併</option>
+		<option>吸収分割</option>
+		<option>新設分割</option>
+		</select>
+		　資本金　<input input type="number" min="0" id ="cap">  <label class = "inf">　
+			特定要件　<select name="" id="tss">
+			<option>非該当</option>
+			<option>該当</option>
+			</select></span></a></li>
 
+	<li class="menuimg menu2"><a><span>当課税期間　<input type="date" id = "skt">　～　<input  type="date" id = "fkt">　課税売上高　<input type="number"min="0" id ="kzut"></span></a></li>
+	<li class="menuimg menu3"><a><span>基準期間　　<input type="date" id = "skk">　～　<input type="date" id = "fkk">　 課税売上高　<input type="number" min="0" id ="kzuk"></span></a></li>
+	<li class="menuimg menu4"><a><span>特定期間　　<input type="date" id = "stk">　～　<input type="date" id = "ftk">　　 課税売上高　<input type="number" min="0" id ="kzuz">　　給与等支払額　<input type="number" id ="kyz" ></span></a></li>
+	<li class="menuimg menu5"><a><span>課税事業者選択・変更　<input type="date" id = "kjsh">　に提出　　　簡易課税　<input type="date" id = "kkzt">　に提出</span></a></li>
+	<li class="menuimg menu5"><a><span>一括比例配分　<input type="date" id = "ihh">　に最後に選択</span></a></li>
+	<li class="menuimg menu5"><a><span>調整対象固定資産仕入　<input type="date" id = "ttk">　高額特定資産仕入　<input type="date" id = "kts">　棚卸資産の調整　<input type="date" id = "tst"></span></a></li>
+	</ul>
+	</nav>
+	
 
-    
+</header>
+<!--/.pc-->
 
-    </div>
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
 
-    <label id ="kjk">●　基準期間</label>
-    <label id ="tk">●　特定期間</label>
-    <label id ="kzk">●　当課税期間</label>
-    <label id ="mzk">●　免税事業者期間</label>
-    <label id ="kzjk">●　課税事業者期間</label>
-    <label id ="tkk">●　提出可能期間</label>
-    <label id ="tfk">●　提出不能期間</label>
-    <label id ="tyk">●　適用（可能）期間</label>
-    <label id ="tygk">●　適用外期間</label>
-    <label id ="fm">●　不明</label>
+	<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="SAMPLE SITE"></a></h1>
 
-
-    <div class="container-d"> 
-      <div class="container5"> 
-        <p class = "ajh"></p>
-        <div id = "trmh">期間</div>
-        <div class="fukidashi2">当課税期間、基準期間、特定期間を表示します</div>
-        <p class = "ajh"></p>
-        <div id = "nzgh">納税義務</div>
-        
-        <p class = "ajh"></p>
-        <div id = "kshh">課税選択・変更</div>
-        <div class="fukidashi4">課税事業者選択・変更届出書を提出している場合は選択不適用届出書の提出可能期間も含まれます</div>
-        <p class = "ajh"></p>
-        <div id = "kkzh">簡易課税</div>
-        <div class="fukidashi5">上段に適用の可否、下段に提出の可否を表示します。また消費税簡易課税制度選択届出書を提出している場合は選択不適用届出書の提出可能及び不能期間になります</div>
-        <p class = "ajh"></p>
-        <div id = "kthh">個別対応</div>
-        
-        <p class = "ajh"></p>
-        <div>短縮・変更</div>
-      </div>
-      <canvas id="target"></canvas>
-    </div>
-      
-
-    
-
-  </main>
+	<!--小さな端末用（800px以下端末）メニュー-->
+	<div id="menubar-s">
+	<nav>
+	<ul>
+		<li class="menuimg menu1 current"><a href="index.html"><span>一定の場合</span></a></li>
+		<li class="menuimg menu2"><a href="company.html"><span>当課税期間</span></a></li>
+		<li class="menuimg menu3"><a href="works.html"><span>基準期間</span></a></li>
+		<li class="menuimg menu4"><a href="link.html"><span>特定期間</span></a></li>
+		<li class="menuimg menu5"><a href="contact.html"><span>課税選択・変更</span></a></li>
+		<li class="menuimg menu5"><a href="contact.html"><span>簡易課税</span></a></li>
+		<li class="menuimg menu5"><a href="contact.html"><span>一括比例配分</span></a></li>
+		<li class="menuimg menu5"><a href="contact.html"><span>調整対象固定資産</span></a></li>
+	</ul>
+	</nav>
+	
 
 
 
 
+	
+	
+	<!--/#menubar-s-->
+
+</header>
+<!--/.sh-->
+
+<div id="contents">
+
+<div id="main">
+
+<span id="pagetop"></span>
+
+<section id="new">
+
+<h2>What's New</h2>
+<dl>
+<dt>2021/09/2</dt>
+<dd>調整対象固定資産、高額特定資産、他の卸資産の調整に対応<span class="newicon">NEW</span></dd>
+<dt>2021/09/1</dt>
+<dd>提出制限等の延長に対応</dd>
+<dt>2021/08/31</dt>
+<dd>簡易課税に対応</dd>
+<dt>2021/08/31</dt>
+<dd>課税選択・変更に対応</dd>
+<dt>2021/08/30</dt>
+<dd>特定期間に対応(短期事業年度の判定未実装)</dd>
+<dt>2021/08/28</dt>
+<dd>納税義務の一部に対応</dd>
+<dt>2021/08/28</dt>
+<dd>課税期間に取得(一部)に対応</dd>
+</dl>
+
+</section>
+<!--/#new-->
+
+<footer><!--フッター-->
+
+</footer>
+
+</div>
+<!--/#main-->
+
+</div>
+<!--/#contents-->
+
+<!--スライドショー-->
+<aside id="mainimg">
+	<div class="slide0">slide0</div>
+	<div class="slide1">slide1</div>
+	<div class="slide2">slide2</div>
+	<div class="slide3">slide3</div>
+	</aside>
+
+</div>
+<!--/#container-->
+
+<!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
 
 
+<script type="text/javascript" src="js/openclose.js"></script>
 
 
+<!--メニューの開閉処理条件設定　800px以下-->
 
-<script type="text/javascript" src="main.js"></script>
 </body>
+
+
+
 </html>
