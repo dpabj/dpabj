@@ -33,41 +33,40 @@
 
 
 <body class="home">
-	
+	<h1 class = "tl"> Tool for Consumption Tax(α) </h1> <button id ="bht">Result</button><button id ="bhu">How To Use</button>
+		<canvas></canvas>
+		
 <div id="container">
-	<h1>Tool for Consumption Tax(α)</h1> 
 	
-	<canvas id="target"></canvas>
-	<button id ="bht">Result</button>
+	
 <!--PC用（801px以上端末）で表示させるブロック-->
 <header class="pc">
     
-	<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="SAMPLE SITE"></a></h1>
+	<h1 class="logo">MENU</h1>
 
 	<!--PC用（801px以上端末）メニュー-->
 	<nav id="menubar">
 	<ul>
 	
-	<li class="menuimg menu1"><a><span>一定の場合　<input type="date" id = "itt" >　に　<select name="" id="itj">
+	<li class="menuimg menu1"><a><span><div>一定の場合　<input type="date" class = "inf" id = "itt" >　に　<select name="" id="itj">
 		<option>事業開始(新設)</option>
 		<option>相続</option>
 		<option>吸収合併</option>
 		<option>新設合併</option>
 		<option>吸収分割</option>
 		<option>新設分割</option>
-		</select>
-		　資本金　<input input type="number" min="0" id ="cap">  <label class = "inf">　
-			特定要件　<select name="" id="tss">
+		</select></div>
+		　<div>資本金　<input input type="number" min="0"  class = "inf" id ="cap">  <label class = "inf">　
+			特定要件　<select name=""  class = "inf" id="tss">
 			<option>非該当</option>
 			<option>該当</option>
-			</select></span></a></li>
+			</select></div></span></a></li>
 
-	<li class="menuimg menu2"><a><span>当課税期間　<input type="date" id = "skt">　～　<input  type="date" id = "fkt">　課税売上高　<input type="number"min="0" id ="kzut"></span></a></li>
-	<li class="menuimg menu3"><a><span>基準期間　　<input type="date" id = "skk">　～　<input type="date" id = "fkk">　 課税売上高　<input type="number" min="0" id ="kzuk"></span></a></li>
-	<li class="menuimg menu4"><a><span>特定期間　　<input type="date" id = "stk">　～　<input type="date" id = "ftk">　　 課税売上高　<input type="number" min="0" id ="kzuz">　　給与等支払額　<input type="number" id ="kyz" ></span></a></li>
-	<li class="menuimg menu5"><a><span>課税事業者選択・変更　<input type="date" id = "kjsh">　に提出　　　簡易課税　<input type="date" id = "kkzt">　に提出</span></a></li>
-	<li class="menuimg menu5"><a><span>一括比例配分　<input type="date" id = "ihh">　に最後に選択</span></a></li>
-	<li class="menuimg menu5"><a><span>調整対象固定資産仕入　<input type="date" id = "ttk">　高額特定資産仕入　<input type="date" id = "kts">　棚卸資産の調整　<input type="date" id = "tst"></span></a></li>
+	<li class="menuimg menu2"><a><span><div>当課税期間　<input type="date" class = "inf" id = "skt">　～　<input  type="date"class = "inf"  id = "fkt"></div><div>課税売上高　<input type="number"min="0"  class = "inf" id ="kzut"></div></span></a></li>
+	<li class="menuimg menu3"><a><span><div>基準期間　　<input type="date" class = "inf" id = "skk">　～　<input type="date" class = "inf" id = "fkk"></div><div>課税売上高　<input type="number" min="0"  class = "inf" id ="kzuk"></div></span></a></li>
+	<li class="menuimg menu4"><a><span><div>特定期間　　<input type="date" class = "inf" id = "stk">　～　<input type="date" class = "inf" id = "ftk"></div><div>課税売上高　<input type="number" min="0"  class = "inf" id ="kzuz">　　給与等支払額　<input type="number" class = "inf" id ="kyz" ></div></span></a></li>
+	<li class="menuimg menu5"><a><span><div>課税事業者選択・変更　<input type="date" class = "inf" id = "kjsh">　に提出</div><div>簡易課税　<input type="date" id = "kkzt">　に提出</div><div>一括比例配分　<input type="date" class = "inf" id = "ihh">　に最後に選択</div></span></a></li>
+	<li class="menuimg menu6"><a><span><div>調整対象固定資産仕入　<input type="date" class = "inf" id = "ttk"></div><div>高額特定資産仕入　<input type="date" class = "inf" id = "kts"></div><div>棚卸資産の調整　<input type="date" class = "inf" id = "tst"></div></span></a></li>
 	</ul>
 	</nav>
 	
@@ -95,10 +94,6 @@
 	</ul>
 	</nav>
 	
-
-
-
-
 	
 	
 	<!--/#menubar-s-->
@@ -148,9 +143,7 @@
 <!--スライドショー-->
 <aside id="mainimg">
 	<div class="slide0">slide0</div>
-	<div class="slide1">slide1</div>
-	<div class="slide2">slide2</div>
-	<div class="slide3">slide3</div>
+	
 	</aside>
 
 </div>
@@ -163,7 +156,7 @@
 <div id="menubar_hdr" class="close"></div>
 
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/openclose.js"></script>
 
 
 <!--メニューの開閉処理条件設定　800px以下-->
