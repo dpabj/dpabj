@@ -29,26 +29,44 @@
 
 
 
-
-
-
 <body class="home">
 	<h1 class = "tl"> Tool for Consumption Tax(α) </h1> <button id ="bht">Result</button><button id ="bhu">How To Use</button>
-		<canvas></canvas>
-		
+	
+		<select required class = "ftl" id = "ftl">
+			<option value="" hidden>Choose</option>
+			<option  class="ftlc">課税期間?</option>
+			<option  class="ftlc">基準期間?</option>
+			<option  class="ftlc">特定期間?</option>
+			<option  class="ftlc">課税売上高?</option>
+			<option  class="ftlc">特定新規設立法人?</option>
+			<option  class="ftlc">新規設立法人?</option>
+			<option  class="ftlc">新設法人?</option>
+			<option  class="ftlc">特定要件?</option>
+			<option  class="ftlc">給与等支払額?</option>
+			<option  class="ftlc">一括比例配分方式?</option>
+			<option  class="ftlc">調整対象固定資産?</option>
+			<option  class="ftlc">高額特定資産?</option>
+			<option  class="ftlc">棚卸資産の調整?</option>
+		</select>
+
+
 <div id="container">
 	
 	
 <!--PC用（801px以上端末）で表示させるブロック-->
 <header class="pc">
     
-	<h1 class="logo">MENU</h1>
+	<h3 class="logo">入力欄</h3>
 
 	<!--PC用（801px以上端末）メニュー-->
 	<nav id="menubar">
 	<ul>
-	
-	<li class="menuimg menu1"><a><span><div>一定の場合　<input type="date" class = "inf" id = "itt" >　に　<select name="" id="itj">
+	<li class="menu"><a>短縮・変更<span><div><input type="date" class = "inf" id = "tshk" >　に　<select name="" class = "inf" id="tshkj">
+		<option>3月</option>
+		<option>1月</option>
+	</select>　に短縮・変更</div></span></a></li>
+
+	<li class="menu"><a>特例<span><div><input type="date" class = "inf" id = "itt" >　に　<select name="" class = "inf" id="itj">
 		<option>事業開始(新設)</option>
 		<option>相続</option>
 		<option>吸収合併</option>
@@ -56,17 +74,17 @@
 		<option>吸収分割</option>
 		<option>新設分割</option>
 		</select></div>
-		　<div>資本金　<input input type="number" min="0"  class = "inf" id ="cap">  <label class = "inf">　
-			特定要件　<select name=""  class = "inf" id="tss">
+		　<div>資本金　<input input type="number" min="0"  class = "inf" id ="cap"><label >　
+			特定新規設立法人　<select name=""  class = "inf" id="tss">
 			<option>非該当</option>
 			<option>該当</option>
 			</select></div></span></a></li>
 
-	<li class="menuimg menu2"><a><span><div>当課税期間　<input type="date" class = "inf" id = "skt">　～　<input  type="date"class = "inf"  id = "fkt"></div><div>課税売上高　<input type="number"min="0"  class = "inf" id ="kzut"></div></span></a></li>
-	<li class="menuimg menu3"><a><span><div>基準期間　　<input type="date" class = "inf" id = "skk">　～　<input type="date" class = "inf" id = "fkk"></div><div>課税売上高　<input type="number" min="0"  class = "inf" id ="kzuk"></div></span></a></li>
-	<li class="menuimg menu4"><a><span><div>特定期間　　<input type="date" class = "inf" id = "stk">　～　<input type="date" class = "inf" id = "ftk"></div><div>課税売上高　<input type="number" min="0"  class = "inf" id ="kzuz">　　給与等支払額　<input type="number" class = "inf" id ="kyz" ></div></span></a></li>
-	<li class="menuimg menu5"><a><span><div>課税事業者選択・変更　<input type="date" class = "inf" id = "kjsh">　に提出</div><div>簡易課税　<input type="date" id = "kkzt">　に提出</div><div>一括比例配分　<input type="date" class = "inf" id = "ihh">　に最後に選択</div></span></a></li>
-	<li class="menuimg menu6"><a><span><div>調整対象固定資産仕入　<input type="date" class = "inf" id = "ttk"></div><div>高額特定資産仕入　<input type="date" class = "inf" id = "kts"></div><div>棚卸資産の調整　<input type="date" class = "inf" id = "tst"></div></span></a></li>
+	<li class="menu"><a>課税期間<span><div>当課税期間　<input type="date" class = "inf" id = "skt">　～　<input  type="date" class = "inf"  id = "fkt"></div><div>課税売上高　<input type="number"min="0"  class = "inf" id ="kzut"></div></span></a></li>
+	<li class="menu"><a>基準期間<span><div>基準期間　　<input type="date" class = "inf" id = "skk">　～　<input type="date" class = "inf" id = "fkk"></div><div>課税売上高　<input type="number" min="0"  class = "inf" id ="kzuk"></div></span></a></li>
+	<li class="menu"><a>特定期間<span><div>特定期間　　<input type="date" class = "inf" id = "stk">　～　<input type="date" class = "inf" id = "ftk"></div><div>課税売上高　<input type="number" min="0"  class = "inf" id ="kzuz">　　給与等支払額　<input type="number" class = "inf" id ="kyz" ></div></span></a></li>
+	<li class="menu"><a>選択変更・簡易<span><div>課税事業者選択・変更　<input type="date" class = "inf" id = "kjsh">　に提出</div><div>簡易課税　<input type="date" class = "inf" id = "kkzt">　に提出</div><div>一括比例配分　<input type="date" class = "inf" id = "ihh">　に最後に選択</div></span></a></li>
+	<li class="menu"><a>制限の延長<span><div>調整対象固定資産仕入　<input type="date" class = "inf" id = "ttk"></div><div>高額特定資産仕入　<input type="date" class = "inf" id = "kts"></div><div>棚卸資産の調整　<input type="date" class = "inf" id = "tst"></div></span></a></li>
 	</ul>
 	</nav>
 	
@@ -112,7 +130,7 @@
 <h2>What's New</h2>
 <dl>
 <dt>2021/09/2</dt>
-<dd>調整対象固定資産、高額特定資産、他の卸資産の調整に対応<span class="newicon">NEW</span></dd>
+<dd>調整対象固定資産、高額特定資産、棚卸資産の調整に対応<span class="newicon">NEW</span></dd>
 <dt>2021/09/1</dt>
 <dd>提出制限等の延長に対応</dd>
 <dt>2021/08/31</dt>
@@ -156,10 +174,23 @@
 <div id="menubar_hdr" class="close"></div>
 
 
+
+<!--メニューの開閉処理条件設定　800px以下-->
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<div id="example3.1" style="width:1350px; height: 600px; margin-left: 150px;"></div>
+
+
+
+
 <script type="text/javascript" src="js/openclose.js"></script>
 
 
-<!--メニューの開閉処理条件設定　800px以下-->
+
+
 
 </body>
 
