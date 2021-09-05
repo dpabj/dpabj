@@ -476,8 +476,8 @@ color: #c5a081;
 		position: fixed;
 		z-index: 3;
 		top: 20px;
-		width: 100%;
-		height: 50%;
+		width: auto;
+		height: auto;
 		overflow: auto;
 		background: rgba(0,0,0,0.8);	/*背景色*/
 		animation-name: menubar;		/*上のkeyframesの名前*/
