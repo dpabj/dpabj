@@ -508,18 +508,6 @@ color: #c5a081;
 		padding-top: 15px;	/*上に空ける余白。上下のバランスをとります。*/
 		padding-left: 80px;	/*左に空ける余白*/
 	}
-	/*menu1*/
-	.menu1 a {
-		background-position: 20px 0px;
-	}
-	/*menu2*/
-	.menu2 a {
-		background-position: 20px -60px;
-	}
-	/*menu3*/
-	.menu3 a {
-		background-position: 20px -120px;
-	}
 	
 	/*PC用メニューを非表示にする*/
 	#menubar {display: none;}
