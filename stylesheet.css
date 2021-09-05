@@ -3,11 +3,6 @@
 /*google fontsの読み込み*/
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 
-
-
-/*全端末（PC・タブレット・スマホ）共通設定
-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
 /*全体の設定
 ---------------------------------------------------------------------------*/
 body,html {width: 100%;height: 100%;}
@@ -53,9 +48,6 @@ border-color: #ffffff;
  margin-top: 1vw;
 }
 
-
-
-
 #bht{
 	position: absolute;
 	left: 20vw;
@@ -100,30 +92,21 @@ background :#ffede0;
 color : #d6b8a0;
 }
 
-
-
-.menu{
-font-weight: bold;
-
-
+#timeline{
+	position: relative;
+	top:7vw ;
+	left: 5vw;
+	width:75vw; 
+	height: 60wn;
+	 margin-left: 13vw;
 }
 
-
-
-h1,h2,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+h1,h2,h4,h5,p,ul,ol,dl,dt,dd,form,figure,form,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
 ul {list-style-type: none;}/*リストのマーカー消す*/
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
-
-iframe {width: 100%;} /**おそらく不要/
 
 /*---------------------------------------------------------------------------*/
 /*containerブロック共通*/
-#container {
-	
-	width: 100%;
-	height:auto;
 
-}
 
 /*contentsブロック
 ---------------------------------------------------------------------------*/
@@ -156,40 +139,38 @@ header.pc {
 }
 /*マウスオン時のheaderブロック*/
 header.pc:hover {
-	width: 40vw;	/*幅*/
+	width: 45vw;	/*幅*/
 	overflow: auto;	/*ウィンドウの高さよりコンテンツが増えた場合に切れないように自動でスクロールバーを出す設定*/
 	background-color: #d6b8a0;	/*背景色（古いブラウザ用）*/
 	background-color: #bb9678;	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
 }
 /*ロゴ画像ブロック*/
-header.pc .logo {
+header.pc .inpf {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	text-align: center;	/*内容をセンタリング*/
 	border-bottom: 1px solid #fff;	/*下線の幅、線種、色（古いブラウザ用）*/
 	border-bottom: 1px solid rgba(255,255,255,0.3);	/*下線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
 	height: auto;	/*高さ*/
+	font-size: 1vw;
 }
-
-/*header内のp(段落)タグ*/
-
 
 /*メインメニュー
 ---------------------------------------------------------------------------*/
 /*メニュー１個あたりの設定*/
 #menubar li {
-	font-size: 14px;/*文字サイズ*/
+	font-size: 1vw;/*文字サイズ*/
 	position: relative;
-
+	font-weight: bold;
 }
 #menubar li a {
 	display:  block;text-decoration: none;
 	border-bottom: 1px solid #fff;	/*下線の幅、線種、色（古いブラウザ用）*/
 	border-bottom: 1px solid rgba(255,255,255,0.3);	/*下線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
 	width: auto;	/*幅*/
-	height: 140px;	/*高さ 後で調整*/
+	height: 12vw;	/*高さ 後で調整*/
 
-	padding-left: 20px;	/*左に空ける余白*/
+	padding-left: 1vw;	/*左に空ける余白*/
 }
 /*マウスオン時*/
 header:hover #menubar li a:hover {
@@ -223,6 +204,7 @@ header:hover #menubar li a span {
 	top: 0px;
 }
 }
+
 /*mainブロック*/
 #main {
 	overflow: auto;
@@ -242,68 +224,22 @@ header:hover #menubar li a span {
 	letter-spacing: 0.2em;	/*文字間隔を少し広くとる設定*/
 	color: #ffffff;			/*文字色*/
 }
-/*h2タグの１文字目への指定*/
-#main h2::first-letter {
-	border-left: 3px solid #c1bc9e;	/*左の線の幅、線種、色*/
-	padding-left: 20px;				/*線と文字の間の余白*/
-}
-/*h2タグにclass="title"をつけたタイプ。大見出し。*/
-#main h2.title {
-	font-family: 'Poiret One';	/*冒頭のgoogle fontsの指定*/
-	font-size: 60px;			/*文字サイズ*/
-	margin-bottom: 40px;		/*見出しの下に空けるスペース*/
-	border-bottom: 1px solid #c1bc9e;	/*下線の幅、線種、色*/
-}
-#main h2.title::first-letter {
-	border-left: none;
-	padding-left: 0;
-}
-/*h2タグにclass="title"をつけたタイプ内にあるspanタグ*/
-#main h2.title span {
-	display: block;
-	font-size: 15px;	/*文字サイズ*/
-	float: right;		/*右に回り込み*/
-	margin-top: 60px;	/*上に空ける余白。上下のバランスをここでとります。*/
-}
-/*h3タグ*/
-#main h3 {
-	clear: both;
-	margin-bottom: 20px;	/*見出しの下に空けるスペース*/
-	font-size: 20px;		/*文字サイズ*/
-}
-/*段落(p)タグ*/
-#main p {
-	padding: 0 20px 20px;	/*上、左右、下への余白*/
-}
-/*他。微調整。*/
-#main p + p {
-	margin-top: -5px;
-}
-#main h2 + p,
-#main h3 + p {
-	margin-top: -10px;
-}
-#main section + section {
-	clear: both;
-	padding-top: 40px;
-}
-
 
 /*footerブロック
 ---------------------------------------------------------------------------*/
 footer {
 	clear: both;
 	text-align: right;
-	padding: 30px 0;
+	padding: 3px 0;
 }
-.home footer {padding-bottom: 10px;}
+.home footer {padding-bottom: 3px;}
 footer a {text-decoration: none;}
 
 /*「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
 /*見出しを含まないお知らせブロック*/
 #new dl {
-	height: 100px;		/*高さ*/
+	height: 5vw;		/*高さ*/
 	overflow: hidden;	/*高さを超えるコンテンツ量部分は非表示に*/
 }
 /*ブロックのマウスオン時*/
@@ -321,7 +257,6 @@ footer a {text-decoration: none;}
 	padding-left: 9em;	/*左に空ける余白*/
 }
 
-
 /*トップページのNEWアイコン
 ---------------------------------------------------------------------------*/
 .newicon {
@@ -334,38 +269,8 @@ footer a {text-decoration: none;}
 	margin: 0px 5px;
 	vertical-align: text-top;
 }
-
-/*ul.disc,olタグ
----------------------------------------------------------------------------*/
-ul.disc {
-	list-style: disc;
-	padding: 0 20px 20px 45px;
-}
-ol {
-	padding: 0 20px 20px 45px;
-}
-
 /*その他
 ---------------------------------------------------------------------------*/
-.look {background: #000;padding: 5px 10px;border-radius: 4px;border: 1px solid #666;color: #fff;}
-.mb15,.mb1em {margin-bottom: 15px !important;}
-.mb30 {margin-bottom: 30px !important;}
-.clear {clear: both;}
-.color1, .color1 a {color: #448db3 !important;}
-.pr {font-size: 10px;}
-.wl {width: 96%;}
-.ws {width: 50%;}
-.c {text-align: center;}
-.r {text-align: right;}
-.l {text-align: left;}
-.fl {float: left;}
-.fr {float: right;}
-.mini1 {font-size: 11px;display: inline-block;line-height: 1.5;}
-.sh {display: none;}
-#pagetop {display: block;margin-top: -2%;padding-top: 2%;}
-
-
-
 /*画像ブロック*/
 #mainimg {
 	clear: left;
@@ -382,13 +287,23 @@ ol {
 	background: #d6b8a0 ;
 	position: relative;width: 100%;height: 100%;
 }
-
-
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .inf{
-width: 25vw;
+width: 10vw;
 font-weight: bold;
 color: #c5a081;
+font-size: 1vw;
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+#new{
+display: none;
+
+}
+
+
+}
 	
