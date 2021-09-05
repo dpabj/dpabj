@@ -2,7 +2,7 @@
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------
   //一定の場合
   
-  
+ 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------
   //条件
      function cond(csktvdp1y,sktvd,fktvd,skkvd,trmkjk,trmttk,trmkzk){
@@ -50,7 +50,7 @@
         }//if2
         
       　if (mn1d.getTime() != fktvd.getTime()) {//if2 期間が1年じゃない
-  　　　   alert("期間が1年じゃない")
+  　　　 
             
         　let ittvdp1y = new Date(ittvd.setFullYear(ittvd.getFullYear()+1))
           
@@ -108,7 +108,7 @@
    //-----------------------------------------------------------------------------------------------------------------------------------------------------------
   function judge5(ihhv){ //個別対応方式
     if (ihhv =="") {
-      alert("個別対応方式選択可能")
+      
      return;
     }
   }
@@ -244,7 +244,7 @@ let kjsh = document.getElementById('kjsh'); //課税選択・変更
     }
   //----------------------------------------------------------------------------------------------------------------------------------------------------
     if (kjshv =="") { //if1
-      alert("課税事業者選択変更提出無し")
+     
     }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------簡易提出関連
   let kzut = document.getElementById('kzut'); //簡易課税
@@ -315,7 +315,7 @@ let kjsh = document.getElementById('kjsh'); //課税選択・変更
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
         
-          var container = document.getElementById('example3.1');
+          var container = document.getElementById('timeline');
           var chart = new google.visualization.Timeline(container);
           var dataTable = new google.visualization.DataTable();
           dataTable.addColumn({ type: 'string', id: 'Position' });
@@ -448,8 +448,8 @@ let kjsh = document.getElementById('kjsh'); //課税選択・変更
   
     let bht = document.getElementById("bht");
     bht.addEventListener('click', butotnClick);
-  //-----------------------------------------------------------------------------------------------------------------------------------------------------------
-   function butotnClick2()　{
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    function butotnClick2()　{
      const msg = "左の入力欄に条件を入力して「Result」ボタンを押すと判定内容が表示されます。「Choose」欄を選択すると用語の意義が表示されます。" 
     alert(msg)
     }
@@ -457,6 +457,7 @@ let kjsh = document.getElementById('kjsh'); //課税選択・変更
     bhu.addEventListener('click', butotnClick2);
     
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+  
   let ftl = document.getElementById("ftl");
   ftl.addEventListener('change', inputChange);
 
