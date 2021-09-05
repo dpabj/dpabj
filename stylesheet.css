@@ -520,14 +520,7 @@ color: #c5a081;
 	.menu3 a {
 		background-position: 20px -120px;
 	}
-	/*menu4*/
-	.menu4 a {
-		background-position: 20px -180px;
-	}
-	/*menu5*/
-	.menu5 a {
-		background-position: 20px -240px;
-	}
+	
 	/*PC用メニューを非表示にする*/
 	#menubar {display: none;}
 	
