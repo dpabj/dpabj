@@ -502,8 +502,8 @@ color: #c5a081;
 	/*テキスト*/
 	#menubar-s nav li a span {
 		display: block;
-		padding-top: 15px;	/*上に空ける余白。上下のバランスをとります。*/
-		padding-left: 80px;	/*左に空ける余白*/
+		padding-top: auto;	/*上に空ける余白。上下のバランスをとります。*/
+		padding-left: auto;	/*左に空ける余白*/
 	}
 	
 	/*PC用メニューを非表示にする*/
