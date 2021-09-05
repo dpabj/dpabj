@@ -494,7 +494,7 @@ color: #c5a081;
 	#menubar-s nav li a {
 		display: block;text-decoration: none;width: 100%;
 		border-bottom: 1px solid #fff;	/*下の線の幅、線種、色*/
-		font-size: 16px;	/*文字サイズ*/
+		font-size: 8px;	/*文字サイズ*/
 		height: 100px;		/*高さ*/
 		height: 60px;		/*高さ*/
 	}
