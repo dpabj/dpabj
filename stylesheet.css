@@ -475,7 +475,7 @@ color: #c5a081;
 		display: block;
 		position: fixed;
 		z-index: 3;
-		top: 20%;
+		top: 20px;
 		width: 100%;
 		height: 50%;
 		overflow: auto;
