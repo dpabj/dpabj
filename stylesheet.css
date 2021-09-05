@@ -534,29 +534,6 @@ color: #c5a081;
 	/*３本バーアイコン設定
 	---------------------------------------------------------------------------*/
 	/*３本バーブロック*/
-	#menubar_hdr {
-		display: block;
-		position: fixed;z-index: 50;
-		top: 10px;		/*上から10pxの場所に配置*/
-		left: 10px;	/*右から10pxの場所に配置*/
-	}
-	/*アイコン共通設定*/
-	#menubar_hdr.close,
-	#menubar_hdr.open {
-		width: 50px;	/*幅*/
-		height: 50px;	/*高さ*/
-		border-radius: 50%;	/*円形にする*/
-		border: 1px solid #fff;	/*枠線の幅、線種、色*/
-	}
-	/*三本バーアイコン*/
-	#menubar_hdr.close {
-		background: #000 url(../images/icon_menu.png) no-repeat center top/50px;	/*背景色、背景画像の読み込み、画像の上半分（３本マーク）を表示。幅は50px。*/
-	}
-	/*閉じるアイコン*/
-	#menubar_hdr.open {
-		background: #000 url(../images/icon_menu.png) no-repeat center bottom/50px;	/*背景色、背景画像の読み込み、画像の下半分（×マーク）を表示。幅は50px。*/
-		top: 5px;	/*配置場所の再指定*/
-	}
 	
 	/*facebookやtwitterなどのアイコンブロック
 	---------------------------------------------------------------------------*/
