@@ -454,3 +454,287 @@ color: #c5a081;
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+	/*header（小さな端末用：上部ブロック）
+	---------------------------------------------------------------------------*/
+	/*ロゴ画像ブロック*/
+	header.sh .logo {
+		width: 80px;	/*ロゴ画像の幅*/
+	}
+	
+	/*メインメニュー
+	---------------------------------------------------------------------------*/
+	/*アニメーションのフレーム設定。全100コマアニメーションだと思って下さい。
+	透明(opacity: 0;)から色をつける(opacity: 1;)までの指定。*/
+	@keyframes menubar {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	/*スマホ用メニューブロック*/
+	#menubar-s {
+		display: block;
+		position: fixed;
+		z-index: 3;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background: rgba(0,0,0,0.8);	/*背景色*/
+		animation-name: menubar;		/*上のkeyframesの名前*/
+		animation-duration: 0.5s;		/*アニメーションの実行時間。0.5秒。*/
+		animation-fill-mode: both;		/*待機中は最初のキーフレームを、完了後は最後のキーフレームを維持*/
+		border-top: 1px solid #fff;		/*上の線の幅、線種、色*/
+	}
+	/*navブロックのみの追加指定*/
+	#menubar-s nav {
+		border-bottom: 1px solid #fff;	/*下の線の幅、線種、色*/
+		overflow: auto;
+	}
+	/*メニュー１個あたりの設定*/
+	#menubar-s nav li a {
+		display: block;text-decoration: none;width: 100%;
+		border-bottom: 1px solid #fff;	/*下の線の幅、線種、色*/
+		font-size: 16px;	/*文字サイズ*/
+		height: 100px;		/*高さ*/
+		height: 60px;		/*高さ*/
+	}
+	/*最後のnavメニューの下線を消す*/
+	#menubar-s nav li:last-child a {
+		border-bottom: none;
+	}
+	/*テキスト*/
+	#menubar-s nav li a span {
+		display: block;
+		padding-top: 15px;	/*上に空ける余白。上下のバランスをとります。*/
+		padding-left: 80px;	/*左に空ける余白*/
+	}
+	/*menu1*/
+	.menu1 a {
+		background-position: 20px 0px;
+	}
+	/*menu2*/
+	.menu2 a {
+		background-position: 20px -60px;
+	}
+	/*menu3*/
+	.menu3 a {
+		background-position: 20px -120px;
+	}
+	/*menu4*/
+	.menu4 a {
+		background-position: 20px -180px;
+	}
+	/*menu5*/
+	.menu5 a {
+		background-position: 20px -240px;
+	}
+	/*PC用メニューを非表示にする*/
+	#menubar {display: none;}
+	
+	/*３本バーアイコン設定
+	---------------------------------------------------------------------------*/
+	/*３本バーブロック*/
+	#menubar_hdr {
+		display: block;
+		position: fixed;z-index: 50;
+		top: 10px;		/*上から10pxの場所に配置*/
+		left: 10px;	/*右から10pxの場所に配置*/
+	}
+	/*アイコン共通設定*/
+	#menubar_hdr.close,
+	#menubar_hdr.open {
+		width: 50px;	/*幅*/
+		height: 50px;	/*高さ*/
+		border-radius: 50%;	/*円形にする*/
+		border: 1px solid #fff;	/*枠線の幅、線種、色*/
+	}
+	/*三本バーアイコン*/
+	#menubar_hdr.close {
+		background: #000 url(../images/icon_menu.png) no-repeat center top/50px;	/*背景色、背景画像の読み込み、画像の上半分（３本マーク）を表示。幅は50px。*/
+	}
+	/*閉じるアイコン*/
+	#menubar_hdr.open {
+		background: #000 url(../images/icon_menu.png) no-repeat center bottom/50px;	/*背景色、背景画像の読み込み、画像の下半分（×マーク）を表示。幅は50px。*/
+		top: 5px;	/*配置場所の再指定*/
+	}
+	
+	/*facebookやtwitterなどのアイコンブロック
+	---------------------------------------------------------------------------*/
+	/*アイコンを囲むブロック全体の設定*/
+	header .icon {
+		clear: left;
+		border-bottom: 1px solid #fff;	/*下の線の幅、線種、色*/
+	}
+	/*アイコン画像の設定*/
+	header .icon img {
+		width: 50px;
+	}
+	
+	/*mainブロック
+	---------------------------------------------------------------------------*/
+	/*mainブロック*/
+	#main {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+	/*h2タグ*/
+	#main h2 {
+		font-size: 20px;		/*文字サイズ*/
+		letter-spacing: normal;	/*文字間隔を標準に戻す*/
+	}
+	/*h2タグにclass="title"をつけたタイプ。大見出し。*/
+	#main h2.title {
+		font-size: 30px;		/*文字サイズ*/
+		margin-bottom: 20px;	/*見出しの下に空けるスペース*/
+	}
+	/*h2タグにclass="title"をつけたタイプ内にあるspanタグ*/
+	#main h2.title span {
+		margin-top: 20px;	/*上に空ける余白。上下のバランスをここでとります。*/
+	}
+	
+	/*footerブロック
+	---------------------------------------------------------------------------*/
+	footer {padding-bottom: 100px;}
+	footer .pr {display: block;}
+	
+	/*「更新情報・お知らせ」ブロック
+	---------------------------------------------------------------------------*/
+	/*見出しを含まないお知らせブロック*/
+	#new dl {
+		overflow: auto;
+	}
+	
+	/*その他
+	---------------------------------------------------------------------------*/
+	.sh {display:block;}
+	.pc {display:none;}
+	
+	}
+	
+	
+	/*画面を横向きにした場合の高さが500px以下の場合の設定。
+	------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	@media screen and (orientation: landscape) and (max-height:500px){
+	
+	/*メインメニュー。小さな端末用メニューを２列に。
+	---------------------------------------------------------------------------*/
+	/*メニュー１個あたりの設定*/
+	#menubar-s nav li a {
+		float: left;		/*左に回り込み*/
+		width: 50%;			/*幅*/
+	}
+	
+	}
+	
+	
+	/*画面幅480px以下の設定
+	------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	@media screen and (max-width:480px){
+	
+	/*mainブロック
+	---------------------------------------------------------------------------*/
+	/*h2タグ*/
+	#main h2 {
+		font-size: 16px;		/*文字サイズ*/
+	}
+	/*h2タグにclass="title"をつけたタイプ。大見出し。*/
+	#main h2.title {
+		font-size: 20px;		/*文字サイズ*/
+	}
+	/*h2タグにclass="title"をつけたタイプ内にあるspanタグ*/
+	#main h2.title span {
+		font-size: 11px;
+		margin-top: 10px;	/*上に空ける余白。上下のバランスをここでとります。*/
+	}
+	/*h3タグ*/
+	#main h3 {
+		font-size: 14px;		/*文字サイズ*/
+	}
+	/*段落(p)タグ*/
+	#main p {
+		padding: 0 10px 20px;	/*上、左右、下への余白*/
+	}
+	/*他。微調整。*/
+	#main section + section {
+		padding-top: 20px;
+	}
+	
+	/*listブロック（works.htmlで使用）
+	---------------------------------------------------------------------------*/
+	/*リンクを指定した際に右上に出る「→」*/
+	.list a::after {
+		right: 2px;			/*右からの配置場所指定*/
+		top: 2px;			/*上からの配置場所指定*/
+		line-height: 20px;	/*行間。下のwidthと揃えて下さい。*/
+		width: 20px;		/*幅。上のline-heightと揃えて下さい。*/
+	}
+	/*h4タグ*/
+	.list h4 {
+		padding: 0;
+	}
+	
+	/*テーブル（ta1）
+	---------------------------------------------------------------------------*/
+	/*テーブル１行目に入った見出し部分（※caption）*/
+	.ta1 caption {
+		padding: 5px;	/*ボックス内の余白*/
+	}
+	/*ta1設定*/
+	.ta1, .ta1 td, .ta1 th {
+		padding: 5px;	/*ボックス内の余白*/
+	}
+	/*ta1の左側ボックス*/
+	.ta1 th {
+		width: 100px;
+	}
+	
+	/*ul.disc,olタグ
+	---------------------------------------------------------------------------*/
+	ul.disc {
+		list-style: disc;
+		padding: 0 10px 20px 30px;
+	}
+	ol {
+		padding: 0 10px 20px 30px;
+	}
+	
+	/*その他
+	---------------------------------------------------------------------------*/
+	.ws,.wl {width: 94%;}
+	
+	}
+	
+	
+	
+	/*画像ブロック*/
+	#mainimg {
+		clear: left;
+		text-indent: -9999px;
+		position: fixed;	/*スクロールしても固定表示させる指定*/
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	
+	/*土台画像*/
+	.slide0 {
+		background: #d6b8a0 ;
+		position: relative;width: 100%;height: 100%;
+	}
+	
+	
+	
+	
+	/*画面の高さが500px以下の場合の設定。
+	------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	@media screen and (max-height:500px){
+	
+	/*土台画像。Whats's Newブロックと重なるので非表示にしました*/
+	.slide0 {
+		background-image: none;
+	}
+	}
