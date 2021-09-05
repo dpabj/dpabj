@@ -224,17 +224,9 @@ header:hover #menubar li a span {
 /*mainブロック
 ---------------------------------------------------------------------------*/
 /*アニメーション設定------------------------*/
-@keyframes main {
-/*0コマ目*/
-0% {
-	opacity: 0;
-	top: 20px;
-}
-/*100コマ目*/
-100% {
-	opacity: 1;
-	top: 0px;
-}
+@keyframes menubar {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }
 /*mainブロック*/
 #main {
