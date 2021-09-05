@@ -449,7 +449,14 @@ let kjsh = document.getElementById('kjsh'); //課税選択・変更
     let bht = document.getElementById("bht");
     bht.addEventListener('click', butotnClick);
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+   function butotnClick2()　{
+     const msg = "左の入力欄に条件を入力して「Result」ボタンを押すと判定内容が表示されます。「Choose」欄を選択すると用語の意義が表示されます。" 
+    alert(msg)
+    }
+    let bhu = document.getElementById("bhu");
+    bhu.addEventListener('click', butotnClick2);
+    
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------
   let ftl = document.getElementById("ftl");
   ftl.addEventListener('change', inputChange);
 
