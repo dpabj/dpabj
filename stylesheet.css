@@ -493,7 +493,7 @@ color: #c5a081;
 		position: fixed;
 		z-index: 3;
 		top: 50px;
-		width: auto;
+		width: 100%;
 		height: auto;
 		overflow: auto;
 		background: rgba(0,0,0,0.8);	/*背景色*/
