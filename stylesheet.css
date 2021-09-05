@@ -475,8 +475,8 @@ color: #c5a081;
 		display: block;
 		position: fixed;
 		z-index: 3;
-		top: 0px;
-		width: 50%;
+		top: 20%;
+		width: 100%;
 		height: 50%;
 		overflow: auto;
 		background: rgba(0,0,0,0.8);	/*背景色*/
